@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Weather</title>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <style>
 	input{
 		margin: 10px 0px;
@@ -71,7 +71,7 @@
 						$("#temp").text(json.main.temp);
 						$("#high").text(json.main.temp_max);
 						$("#low").text(json.main.temp_min);
-						$("#tempImg").attr('src',"http://openweathermap.org/img/wn/"+icon+".png");
+						$("#tempImg").attr('src',"https://openweathermap.org/img/wn/"+icon+".png");
 
     })
 	}
