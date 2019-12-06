@@ -9,7 +9,8 @@
 		padding: 5px;
 	}
 	#forecast{
-		/*This div should not appear until the weather is returned.*/
+		display: none;
+		text-align: center;
 	 }
 	#forecast div{
 		width: 25vw;
@@ -48,6 +49,7 @@
 				units = "metric";
 			}
 
+
 			console.log(units)
 
 
@@ -67,11 +69,13 @@
 						let icon = json.weather[0]['icon']
 						console.log(icon)
 
+						$("#forecast").css("display", "block");
 						$("#loc").text(json.name);
 						$("#temp").text(json.main.temp);
 						$("#high").text(json.main.temp_max);
 						$("#low").text(json.main.temp_min);
-						$("#tempImg").attr('src',"https://openweathermap.org/img/wn/"+icon+".png");
+						$("#tempImg").attr('src',"http://openweathermap.org/img/wn/"+icon+".png");
+
 
     })
 	}
